@@ -119,7 +119,37 @@ li{
 }
 /*End Header styles*/
 
+/*Banners stules*/
 
+.banners{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.banners__title{
+   width: 100%;
+    color: #555656;
+    font-family: "Tahoma";
+    text-transform: uppercase;
+}
+.banners__left{
+    border: 1px solid #6b6b6b;
+}
+
+.banners__control{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banners__btnL, .banners__btnR{
+    color: #f2ac04;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 15px 0;
+}
+/*End Banners stules*/
 
 
 
