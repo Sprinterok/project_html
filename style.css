@@ -73,7 +73,105 @@ li{
     display: flex;
     flex-wrap: wrap;
     margin: 40px 0 35px 0;
-
-
-
 }
+
+.header__title{
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    color: #f2ac04;
+    font-family: "Arial";
+    font-weight: 300;
+    text-align: center;
+}
+.header__description{
+    border-left: 1px solid #929292;
+    margin-left: 40px;
+    padding: 0 0 0 27px;
+}
+.header__text{
+    font-size: 14px;
+    color: #929292;
+    font-family: "Myriad Pro";
+    text-align: center;
+}
+
+.header__menu{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #929292;
+    border-bottom: 1px solid #929292;
+}
+
+.header__link{
+    padding: 15px 35px;
+    text-transform: uppercase;
+    color: #6b6b6b;
+    display: block;
+    cursor: pointer;
+}
+
+.header__menu li:first-child .header__link{
+    padding-left: 0;
+}
+
+.header__link:hover{
+    text-decoration: underline;
+}
+/*End Header styles*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media*/
+/*1000пикседей не раюотает паддинг*/
+@media(max-width: 1000px){
+    .conteiner{
+        padding: 15px;
+    }
+}
+
+@media(max-width: 700px){
+    .container{
+        padding: 15px;
+    }
+
+    .header__Top{
+    justify-content: center;
+    text-align: center;
+    margin: 15px 0 0 0;
+    }
+
+    .header__title{
+        margin: 15px 0;
+    }
+
+    .header__description{
+        margin: 0;
+        padding: 0;
+        border: none;
+        width: 100%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+
+    .header__link{
+        padding: 10px 15px;
+    }
+   
+}
+
+
+
+/*End media*/
