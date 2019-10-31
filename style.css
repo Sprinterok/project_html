@@ -123,13 +123,15 @@ li{
 
 .banners{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .banners__title{
    width: 100%;
     color: #555656;
+    font-weight: 100;
+    font-size: 16px;
     font-family: "Tahoma";
     text-transform: uppercase;
 }
@@ -149,9 +151,75 @@ li{
     font-size: 25px;
     padding: 15px 0;
 }
+
+.banners__left,
+.banners__right{
+    width: 48%;
+}
+
+.banners__img{
+    width: 100%;
+}
+
+.banners__description{
+    border-top: 1px solid black;
+    margin: 5px 0 0 0;
+    padding: 15px;
+    color: #3c3c3c;
+}
+
+.banners__wrap{
+    position: relative;
+}
+
+.banners__overlay{
+    position: absolute;
+    left:0;
+    top:50px;
+    color: white;
+    padding: 15px;
+    
+}
+
+.banners__overlayWeightText, 
+.banners__overlayText{
+    font-family: "Novecentowide";
+    text-transform: uppercase;
+}
+
+.banners__overlayText{
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.banners__overlayWeightText{
+    font-size: 40px;
+    margin: 10px 0 0 0;
+}
+
 /*End Banners stules*/
+.moreLink{
+    margin-left:auto;
+    display: flex;
+    width: 65px;
+    color: white;
+    background: black;
+    text-align: center;
+    border-left: 1px solid white;
+}
 
+i.moreLink__arrow{
+    border-left: 1px solid white;
+    padding: 2px 0 2px 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
 
+.moreLink__text{
+    padding: 2px 5px;
+    display: block;
+}
 
 
 
@@ -168,7 +236,23 @@ li{
     .conteiner{
         padding: 15px;
     }
+    .header__link{
+        padding: 10px 15px;
+    }
 }
+
+@media(max-width: 975px){
+    .banners__overlay{
+        top:15px;
+    }
+    .banners__overlayText{
+        font-size: 24px;
+    }
+    .banners__overlayWeightText{
+        font-size: 30px;
+    }
+}
+
 
 @media(max-width: 700px){
     .container{
@@ -199,9 +283,32 @@ li{
     .header__link{
         padding: 10px 15px;
     }
-   
+
+    .banners{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .banners__left,
+    .banners__right{
+        width: 75%;
+    }
+    .banners__left{
+        margin-bottom: 15px;
+    }
 }
 
-
+@media(max-width: 500px){
+    .banners__left,
+    .banners__right{
+        width: 95%;
+    }
+    .banners__overlayText{
+        font-size: 18px;
+    }
+    .banners__overlayWeightText{
+        font-size: 24px;
+    }
+}
 
 /*End media*/
