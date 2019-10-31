@@ -1,0 +1,314 @@
+/*main styles*/
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body, ul{
+    margin: 0;
+    padding: 0;
+}
+body{
+    border-top: 8px solid #f2ac04;
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    margin: auto;
+    max-width: 1000px;
+}
+/*End main styles*/
+
+/*SHared styles*/
+.logo{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo::after, .logo::before{
+    content:"";
+    border-radius: 50%;
+    position: absolute;
+    background: #f2ac04;
+    z-index: 5;
+    top: 0;
+}
+
+.logo::after {
+    left: 15px;
+}
+.logo::before{
+    left: 0;
+    opacity: 0.55;
+}
+.logo_size_large{
+    width: 210px;
+    height: 55px;
+    font-size: 34px;
+}
+.logo_size_large::after,
+.logo_size_large::before{
+    height: 55px;
+    width: 55px;
+} 
+.logo_size_little{
+    width: 210px;
+    height: 65px;
+    font-size: 34px;
+}
+/* End SHared styles*/
+
+/*Header styles*/
+
+.header__Top{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0 35px 0;
+}
+
+.header__title{
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    color: #f2ac04;
+    font-family: "Arial";
+    font-weight: 300;
+    text-align: center;
+}
+.header__description{
+    border-left: 1px solid #929292;
+    margin-left: 40px;
+    padding: 0 0 0 27px;
+}
+.header__text{
+    font-size: 14px;
+    color: #929292;
+    font-family: "Myriad Pro";
+    text-align: center;
+}
+
+.header__menu{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #929292;
+    border-bottom: 1px solid #929292;
+}
+
+.header__link{
+    padding: 15px 35px;
+    text-transform: uppercase;
+    color: #6b6b6b;
+    display: block;
+    cursor: pointer;
+}
+
+.header__menu li:first-child .header__link{
+    padding-left: 0;
+}
+
+.header__link:hover{
+    text-decoration: underline;
+}
+/*End Header styles*/
+
+/*Banners stules*/
+
+.banners{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.banners__title{
+   width: 100%;
+    color: #555656;
+    font-weight: 100;
+    font-size: 16px;
+    font-family: "Tahoma";
+    text-transform: uppercase;
+}
+.banners__left{
+    border: 1px solid #6b6b6b;
+}
+
+.banners__control{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banners__btnL, .banners__btnR{
+    color: #f2ac04;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 15px 0;
+}
+
+.banners__left,
+.banners__right{
+    width: 48%;
+}
+
+.banners__img{
+    width: 100%;
+}
+
+.banners__description{
+    border-top: 1px solid black;
+    margin: 5px 0 0 0;
+    padding: 15px;
+    color: #3c3c3c;
+}
+
+.banners__wrap{
+    position: relative;
+}
+
+.banners__overlay{
+    position: absolute;
+    left:0;
+    top:50px;
+    color: white;
+    padding: 15px;
+    
+}
+
+.banners__overlayWeightText, 
+.banners__overlayText{
+    font-family: "Novecentowide";
+    text-transform: uppercase;
+}
+
+.banners__overlayText{
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.banners__overlayWeightText{
+    font-size: 40px;
+    margin: 10px 0 0 0;
+}
+
+/*End Banners stules*/
+.moreLink{
+    margin-left:auto;
+    display: flex;
+    width: 65px;
+    color: white;
+    background: black;
+    text-align: center;
+    border-left: 1px solid white;
+}
+
+i.moreLink__arrow{
+    border-left: 1px solid white;
+    padding: 2px 0 2px 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.moreLink__text{
+    padding: 2px 5px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/*media*/
+/*1000пикседей не раюотает паддинг*/
+@media(max-width: 1000px){
+    .conteiner{
+        padding: 15px;
+    }
+    .header__link{
+        padding: 10px 15px;
+    }
+}
+
+@media(max-width: 975px){
+    .banners__overlay{
+        top:15px;
+    }
+    .banners__overlayText{
+        font-size: 24px;
+    }
+    .banners__overlayWeightText{
+        font-size: 30px;
+    }
+}
+
+
+@media(max-width: 700px){
+    .container{
+        padding: 15px;
+    }
+
+    .header__Top{
+    justify-content: center;
+    text-align: center;
+    margin: 15px 0 0 0;
+    }
+
+    .header__title{
+        margin: 15px 0;
+    }
+
+    .header__description{
+        margin: 0;
+        padding: 0;
+        border: none;
+        width: 100%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+
+    .header__link{
+        padding: 10px 15px;
+    }
+
+    .banners{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .banners__left,
+    .banners__right{
+        width: 75%;
+    }
+    .banners__left{
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-width: 500px){
+    .banners__left,
+    .banners__right{
+        width: 95%;
+    }
+    .banners__overlayText{
+        font-size: 18px;
+    }
+    .banners__overlayWeightText{
+        font-size: 24px;
+    }
+}
+
+/*End media*/
